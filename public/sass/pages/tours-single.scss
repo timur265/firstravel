@@ -1,0 +1,308 @@
+#section1-tour-single {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+    position: relative;
+
+    .background {
+        position: fixed;
+        left: 0;
+        width: 100vw;
+        height: 70vh;
+        z-index: -10;
+    }
+
+    .arrow {
+        display: flex;
+        width: 100vw;
+        left: 0;
+        justify-content: center;
+        position: absolute;
+        bottom: 30px;
+        animation: arrow 1s infinite ease-in-out;
+        outline: none;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0) !important;
+        }
+
+        img {
+            width: 34px;
+        }
+    }
+
+    .container {
+        .row {
+            .col-12 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-family: 'SegoeUI-Regular';
+                    font-size: 54px;
+                    color: $mainColor;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 67px;
+                        height: 2px;
+                        background: $lineColor;
+                        margin: 20px auto;
+                    }
+                }
+
+                p {
+                    font-family: 'Montserrat-Light';
+                    color: $mainColor;
+                    font-size: 20px;
+                    line-height: 27px;
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+}
+
+#section2-tour-single {
+    background: $sectionBg;
+    padding: 0;
+    border-bottom: .5px solid lighten($mainFontColor, 50%);
+
+    .container {
+        .row {
+            .col-lg-4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 25px 0;
+
+                &:nth-child(2) {
+                    border-left: .5px solid lighten($mainFontColor, 50%);
+                    border-right: .5px solid lighten($mainFontColor, 50%);
+                }
+
+                p {
+                    font-size: 20px;
+                    font-family: "SegoeUi-Bold";
+                    color: $secondColor;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-left: 10px;
+
+                    span {
+                        font-family: "Montserrat-Regular";
+                        font-size: 14px;
+                        color: $mainFontColor;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section3-tour-single {
+    padding: 100px 0;
+    background: $sectionBg;
+
+    .container {
+        h2:after {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .row {
+            .col-lg-6:nth-child(1) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    font-size: 17px;
+                    color: $mainFontColor;
+                    line-height: 25px;
+                }
+            }
+
+            .col-lg-6:nth-child(2) {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+
+                .owl-carousel {
+                    div {
+                        border-radius: 7px;
+                        img {
+                            height: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section4-tour-single {
+    background: $sectionBg;
+    .container {
+        h2:after {
+            margin: 30px 0 0 0;
+        }
+        .row {
+            .col-12 {
+                margin-top: 30px;
+
+                .item {
+                    .item-head {
+                        display: flex;
+                        align-items: center;
+
+                        .round {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background: $secondColor;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $mainColor;
+                            font-size: 33px;
+                            font-family: "SegoeUi-Bold";
+                            margin-right: 20px;
+                        }
+
+                        h3 {
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .item-body {
+                        margin-top: 20px;
+                        line-height: 25px;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section5-tour-single {
+    padding: 100px 0 50px 0;
+    background: $sectionBg;
+
+    .container {
+        .row {
+            .col-12 {
+                ul {
+                    li {
+                        text-transform: uppercase;
+                        font-family: "Montserrat-Regular";
+                        color: $mainFontColor;
+                        font-size: 17px;
+                        margin-top: 7px;
+
+                        &:nth-child(1) {
+                            margin-top: 0;
+                        }
+
+                        span {
+                            font-family: "SegoeUi-SemiBold";
+                            color: $secondFontColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#section6-tour-single {
+    background: $mainColor;
+    padding: 50px 0;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.315);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: $mainColor;
+        h2::after {
+            margin: 30px auto;
+        }
+
+        .row {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+
+            .col-12 {
+                padding: 0 30px;
+
+                input,
+                textarea {
+                    margin: 10px auto;
+                    max-width: 400px;
+                    display: block;
+                    padding: 10px 20px;
+                    border: none;
+                    background: $footerColor;
+                    color: $mainColor;
+                    transition: .3s;
+                    border-radius: 7px;
+                    font-size: 15px;
+
+                    &::placeholder,
+                    &[type="text"] {
+                        color: $mainColor;
+                        font-family: "Montserrat-Regular";
+                        font-size: 12px !important;
+
+                    }
+
+                    &:focus {
+                        background: $secondColor;
+                        border-radius: 0;
+                        font-size: 12px !important;
+                    }
+                }
+
+                textarea {
+                    height: 100%;
+                }
+
+                .phone {
+                    margin-top: 30px;
+                }
+
+                button {
+                    margin: 10px auto;
+                    max-width: 400px;
+                    display: block;
+                    padding: 10px 20px;
+                    border: none;
+                    background: $secondColor;
+                    color: $mainColor;
+                    transition: .3s;
+                    border-radius: 7px;
+                    font-size: 15px;
+
+                    &:focus {
+                        background: $footerColor;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}

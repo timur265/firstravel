@@ -1,0 +1,78 @@
+
+//general
+@import 'reboot';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+//animations
+@import 'animations/arrow';
+
+//styles for pages
+@import 'pages/index';
+@import 'pages/services';
+@import 'pages/tours';
+@import 'pages/tours-single';
+@import 'pages/news';
+@import 'pages/news-single';
+
+//components
+@import 'components/loading';
+@import 'components/header';
+@import 'components/sidebarForm';
+@import 'components/footer';
+@import 'components/scrollAndCall';
+@import 'components/callback-form';
+@import 'components/owl-carousel';
+
+//media
+@import 'media'; //general media-styles
+@import 'media/media-index';
+@import 'media/media-tour-single';
+@import 'media/media-services';
+@import 'media/media-tours';
+
+
+
+//main styles
+* {
+    outline: none;
+    transition: .3s;
+}
+body, 
+html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    // scroll-behavior: smooth;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "SegoeUI-Bold";
+    color: $secondColor;
+}
+
+h2 {
+    font-size: 25px;
+    letter-spacing: 3px;
+    &::after {
+        content: '';
+        display: block;
+        width: 67px;
+        height: 2px;
+        background: $lineColor;
+        margin: 30px 0;
+    }
+}
+
+p,
+a,
+span {
+    font-family: "Montserrat-Regular";
+    font-size: 17px;
+    color: #6F6F6F;
+
+}

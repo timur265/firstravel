@@ -1,0 +1,30 @@
+.owl-nav {
+    width: 100%;
+    margin-top: 0 !important;
+    button {
+        margin: 0 10px;
+        &:hover {
+            background: transparent !important;
+        }
+        span {
+            font-size: 50px;
+            color: $secondColor;
+            &:hover {
+                background: transparent !important;
+            }
+        }
+    }
+}
+.owl-dots {
+    width: 100%;
+    .owl-dot {
+        span {
+            background: lighten($secondColor, 40%) !important
+        }
+    }
+    .active {
+        span {
+            background: $secondColor !important
+        }
+    }
+}
