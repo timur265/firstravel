@@ -57,7 +57,6 @@
 <script>
     var path = '<?=PATH;?>';
 </script>
-<script src="js/main.js"> </script>
 </body>
 
 </html>
