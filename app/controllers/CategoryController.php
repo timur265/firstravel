@@ -14,25 +14,13 @@ class CategoryController extends AppController {
         if(!$cities) {
             throw new \Exception('Страница не найдена', 404);
         }
-            $query = "SELECT *
-                FROM product p
-                LEFT JOIN  city USING (city_id)
-                /*LEFT JOIN  tour_program_content tpc on p.id = tpc.product_id*/
-                LEFT JOIN price p2 on p.id = p2.product_id";
-            $tours = \R::getAll($query);
             $this->set(compact('cities'));
-
 
         $this->setMeta('The First Travel | Туры');
     }
 
     public function fetchAction() {
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        $perpage = App::$app->getProperty('pagination');
-        $total = \R::count('product' );
-        $pagination = new Pagination($page, $perpage, $total);
-        $start = $pagination->getStart();
-
+        $this->layout = false;
         if($_POST['query'] != '') {
             $search_query = $_POST['query'];
             $query = "SELECT *
@@ -40,17 +28,16 @@ class CategoryController extends AppController {
                 LEFT JOIN  city USING (city_id)
                 WHERE name LIKE '%$search_query'
                 ORDER BY id DESC ";
-            $tours = \R::getAll($query);
-            $output = '';
+            $tours = \R::getAll($query);            
         } else{
             $search_query = $_POST['query'];
             $query = "SELECT *
                 FROM product p
                 LEFT JOIN  city USING (city_id)
                 ORDER BY id DESC ";
-            $tours = \R::getAll($query);
-            $output = '';
+            $tours = \R::getAll($query);           
         }
+        $output = '';
         foreach ($tours as $tour) {
             $output .=
                 '<div class="col-lg-4 col-md-6 col-sm-12">
